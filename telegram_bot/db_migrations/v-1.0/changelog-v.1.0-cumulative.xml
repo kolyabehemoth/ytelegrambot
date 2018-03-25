@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <include file="1519740451363--create-user-table.xml"  relativeToChangelogFile="true"/>
+    <include file="1519740506383--create-cron-table.xml"  relativeToChangelogFile="true"/>
+    <include file="1519753515001--create-params-table.xml"  relativeToChangelogFile="true"/>
+    <include file="1519765967516--create-params-type-table.xml"  relativeToChangelogFile="true"/>
+    <include file="1519766005269--create-param-values-table.xml"  relativeToChangelogFile="true"/>
+    <include file="1519818839050--alter-users-table.xml" relativeToChangelogFile="true"/>
+    <include file="1520103804823--alter-cron-table.xml" relativeToChangelogFile="true"/>
+    <include file="1521702657806--alter-users-table.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

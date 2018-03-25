@@ -1,0 +1,1 @@
+web: python -W ignore main.py

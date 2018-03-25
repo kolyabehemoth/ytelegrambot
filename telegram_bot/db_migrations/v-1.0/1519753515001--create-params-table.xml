@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="1519753515001" author="behemoth">
+        <createTable tableName="params" >
+            <column name="id" type="bigint" />
+            <column name="cron_id" type="bigint" />
+        </createTable>
+        <rollback>
+            <dropTable tableName="params"/>
+        </rollback>
+    </changeSet>
+    <changeSet id="1519753515001-1" author="behemoth">
+        <addPrimaryKey tableName="params" columnNames="id"/>
+        <addAutoIncrement tableName="params" columnName="id"/>
+        <addForeignKeyConstraint baseTableName="params" baseColumnNames="cron_id" constraintName="crons_params_fk_1" referencedTableName="crons"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="1519765967516" author="behemoth">
+        <createTable tableName="param_types" >
+            <column name="id" type="bigint" />
+            <column name="type" type="varchar(32)"/>
+            <column name="required" type="boolean" defaultValue="False"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1519765967516-1" author="behemoth">
+        <addPrimaryKey tableName="param_types" columnNames="id"/>
+        <addAutoIncrement tableName="param_types" columnName="id"/>
+    </changeSet>
+</databaseChangeLog>

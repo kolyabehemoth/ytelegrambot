@@ -1,0 +1,69 @@
+{
+  "kind": "adsense#report",
+  "totalMatchedRows": "0",
+  "headers": [
+    {
+      "name": "AD_CLIENT_ID",
+      "type": "DIMENSION"
+    },
+    {
+      "name": "AD_REQUESTS",
+      "type": "METRIC_TALLY"
+    },
+    {
+      "name": "EARNINGS",
+      "type": "METRIC_CURRENCY",
+      "currency": "USD"
+    },
+    {
+      "name": "AD_REQUESTS_COVERAGE",
+      "type": "METRIC_RATIO"
+    },
+    {
+      "name": "AD_REQUESTS_RPM",
+      "type": "METRIC_CURRENCY",
+      "currency": "USD"
+    },
+    {
+      "name": "CLICKS",
+      "type": "METRIC_TALLY"
+    },
+    {
+      "name": "COST_PER_CLICK",
+      "type": "METRIC_CURRENCY",
+      "currency": "USD"
+    },
+    {
+      "name": "MATCHED_AD_REQUESTS",
+      "type": "METRIC_TALLY"
+    },
+    {
+      "name": "PAGE_VIEWS",
+      "type": "METRIC_TALLY"
+    }
+  ],
+  "totals": [
+    "",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "averages": [
+    "",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "startDate": "2018-03-08",
+  "endDate": "2018-03-09"
+}

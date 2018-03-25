@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="1519740506383" author="behemoth">
+        <createTable tableName="crons" >
+            <column name="id" type="bigint" />
+            <column name="name" type="varchar(16)" />
+            <column name="user_id" type="bigint" />
+            <column name="start_str" type="varchar(32)" />
+        </createTable>
+        <rollback>
+            <dropTable tableName="crons"/>
+        </rollback>
+    </changeSet>
+    <changeSet id="1519740506383-1" author="behemoth">
+        <addPrimaryKey tableName="crons" columnNames="id"/>
+        <addAutoIncrement tableName="crons" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1"/>
+        <addForeignKeyConstraint baseTableName="crons" baseColumnNames="user_id" constraintName="user_crons_fk_1" referencedTableName="users"
+                                 referencedColumnNames="telegram_id"/>
+    </changeSet>
+</databaseChangeLog>

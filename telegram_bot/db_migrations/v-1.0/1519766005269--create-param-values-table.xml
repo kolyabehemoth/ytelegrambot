@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="1519766005269" author="behemoth">
+        <createTable tableName="param_values" >
+            <column name="id" type="bigint"/>
+            <column name="params_id" type="bigint"/>
+            <column name="type_id" type="bigint"/>
+            <column name="value" type="varchar(32)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1519766005269-1" author="behemoth">
+        <addPrimaryKey tableName="param_values" columnNames="id"/>
+        <addAutoIncrement tableName="param_values" columnName="id"/>
+        <addForeignKeyConstraint baseTableName="param_values" baseColumnNames="params_id" constraintName="params_values_fk" referencedTableName="params"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="param_values" baseColumnNames="type_id" constraintName="params_type_fk" referencedTableName="param_types"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>
